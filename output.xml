@@ -1,60 +1,196 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221025 13:48:55.540" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221025 16:22:39.158" rpa="false" schemaversion="3">
 <suite id="s1" name="TEST 007" source="c:\Users\DGautam\Desktop\Verkkokauppa-Test\test_cases\TEST_007.robot">
-<kw name="Open URL" library="TEST_007_Keyword" type="SETUP">
+<kw name="Open URL" library="TEST_007_Keywords" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221025 13:48:56.016" level="INFO">Opening browser 'Chrome' to base url 'https://www.verkkokauppa.com/'.</msg>
-<status status="PASS" starttime="20221025 13:48:56.016" endtime="20221025 13:48:59.141"/>
+<msg timestamp="20221025 16:22:39.416" level="INFO">Opening browser 'Chrome' to base url 'https://www.verkkokauppa.com/'.</msg>
+<status status="PASS" starttime="20221025 16:22:39.415" endtime="20221025 16:22:41.909"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221025 13:48:59.141" endtime="20221025 13:48:59.447"/>
+<status status="PASS" starttime="20221025 16:22:41.909" endtime="20221025 16:22:42.038"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221025 13:49:01.462" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221025 13:48:59.447" endtime="20221025 13:49:01.462"/>
+<msg timestamp="20221025 16:22:44.043" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 16:22:42.039" endtime="20221025 16:22:44.044"/>
 </kw>
-<status status="PASS" starttime="20221025 13:48:56.016" endtime="20221025 13:49:01.462"/>
+<status status="PASS" starttime="20221025 16:22:39.415" endtime="20221025 16:22:44.044"/>
 </kw>
-<test id="s1-t1" name="User Must Be Able To Register To Create A New Account" line="7">
-<kw name="Click On Login" library="TEST_007_Keyword">
+<test id="s1-t1" name="User must be able to register to create a new account" line="14">
+<kw name="Click Allow cookies" library="TEST_007_Keywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_accept_cookies}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221025 16:22:44.047" level="INFO">Clicking button 'id:allow-cookies'.</msg>
+<status status="PASS" starttime="20221025 16:22:44.046" endtime="20221025 16:22:44.199"/>
+</kw>
+<status status="PASS" starttime="20221025 16:22:44.046" endtime="20221025 16:22:44.200"/>
+</kw>
+<kw name="Click Navbar Login Button" library="TEST_007_Keywords">
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${nav_login}</arg>
+<arg>${btn_login}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221025 13:49:01.462" level="INFO">Clicking element 'xpath://*[@id="account"]'.</msg>
-<status status="PASS" starttime="20221025 13:49:01.462" endtime="20221025 13:49:01.807"/>
+<msg timestamp="20221025 16:22:44.200" level="INFO">Clicking element 'xpath:/html/body/div[1]/div/header/div[1]/nav/div/span[1]/span[1]'.</msg>
+<status status="PASS" starttime="20221025 16:22:44.200" endtime="20221025 16:22:44.359"/>
 </kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 16:22:46.371" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 16:22:44.360" endtime="20221025 16:22:46.371"/>
+</kw>
+<status status="PASS" starttime="20221025 16:22:44.200" endtime="20221025 16:22:46.371"/>
+</kw>
+<kw name="Click On Create A New Account" library="TEST_007_Keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_create_new_account}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221025 16:22:46.371" level="INFO">Clicking element 'xpath:/html/body/div[1]/div/header/div[2]/div[3]/div[3]/div/a[2]'.</msg>
+<status status="PASS" starttime="20221025 16:22:46.371" endtime="20221025 16:22:46.462"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 16:22:48.478" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 16:22:46.463" endtime="20221025 16:22:48.478"/>
+</kw>
+<status status="PASS" starttime="20221025 16:22:46.371" endtime="20221025 16:22:48.478"/>
+</kw>
+<kw name="Fill Up The Create Account Form" library="TEST_007_Keywords">
+<arg>${email}</arg>
+<arg>${password}</arg>
+<arg>${fname}</arg>
+<arg>${lname}</arg>
+<arg>${pNumber}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221025 16:22:48.478" level="INFO">Typing text 'sandm22@email.com' into text field 'id:create-account-form-email'.</msg>
+<status status="PASS" starttime="20221025 16:22:48.478" endtime="20221025 16:22:48.595"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221025 16:22:48.596" level="INFO">Typing password into text field 'id:create-account-form-password'.</msg>
+<msg timestamp="20221025 16:22:48.626" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221025 16:22:48.696" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221025 16:22:48.596" endtime="20221025 16:22:48.696"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_firstname}</arg>
+<arg>${fname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221025 16:22:48.696" level="INFO">Typing text 'group' into text field 'id:create-account-form-first-name'.</msg>
+<status status="PASS" starttime="20221025 16:22:48.696" endtime="20221025 16:22:48.778"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_lastname}</arg>
+<arg>${lname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221025 16:22:48.778" level="INFO">Typing text 'work' into text field 'id:create-account-form-last-name'.</msg>
+<status status="PASS" starttime="20221025 16:22:48.778" endtime="20221025 16:22:48.885"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_ph_number}</arg>
+<arg>${pNumber}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221025 16:22:48.886" level="INFO">Typing text '1234567' into text field 'id:create-account-form-phone-mobile'.</msg>
+<status status="PASS" starttime="20221025 16:22:48.886" endtime="20221025 16:22:48.976"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${select_language}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221025 16:22:48.977" level="INFO">Clicking element 'id:create-account-form-language'.</msg>
+<status status="PASS" starttime="20221025 16:22:48.976" endtime="20221025 16:22:49.052"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${select_language}</arg>
+<arg>English</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20221025 16:22:49.053" level="INFO">Selecting options from selection list 'id:create-account-form-language' by label English.</msg>
+<status status="PASS" starttime="20221025 16:22:49.052" endtime="20221025 16:22:49.110"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${user_consent_to_privacy_policy}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221025 16:22:49.110" level="INFO">Clicking element 'xpath:/html/body/div[1]/div/div/div/div/form/fieldset/div[7]/label'.</msg>
+<status status="PASS" starttime="20221025 16:22:49.110" endtime="20221025 16:22:49.162"/>
+</kw>
+<status status="PASS" starttime="20221025 16:22:48.478" endtime="20221025 16:22:49.162"/>
+</kw>
+<kw name="Submit The Information" library="TEST_007_Keywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_submit_form}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221025 16:22:49.163" level="INFO">Clicking button 'xpath:/html/body/div[1]/div/div/div/div/form/fieldset/button'.</msg>
+<status status="PASS" starttime="20221025 16:22:49.162" endtime="20221025 16:22:49.250"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221025 16:22:51.254" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 16:22:49.250" endtime="20221025 16:22:51.254"/>
+</kw>
+<status status="PASS" starttime="20221025 16:22:49.162" endtime="20221025 16:22:51.254"/>
+</kw>
+<kw name="Check The User Is LoggedIn And Redirected To Customer Account Page" library="TEST_007_Keywords">
 <kw name="Location Should Be" library="SeleniumLibrary">
-<arg>https://www.verkkokauppa.com/fi/account/login</arg>
+<arg>https://www.verkkokauppa.com/fi/account/customer</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<msg timestamp="20221025 13:49:02.782" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20221025 13:49:02.782" level="FAIL">Location should have been 'https://www.verkkokauppa.com/fi/account/login' but was 'https://www.verkkokauppa.com/'.</msg>
-<status status="FAIL" starttime="20221025 13:49:01.807" endtime="20221025 13:49:02.782"/>
+<msg timestamp="20221025 16:22:51.259" level="INFO">Current location is 'https://www.verkkokauppa.com/fi/account/customer'.</msg>
+<status status="PASS" starttime="20221025 16:22:51.255" endtime="20221025 16:22:51.259"/>
 </kw>
-<status status="FAIL" starttime="20221025 13:49:01.462" endtime="20221025 13:49:02.782"/>
+<status status="PASS" starttime="20221025 16:22:51.255" endtime="20221025 16:22:51.260"/>
 </kw>
-<kw name="Click On Create A New Account" library="TEST_007_Keyword">
-<status status="NOT RUN" starttime="20221025 13:49:02.782" endtime="20221025 13:49:02.782"/>
+<kw name="Check The Information Shown In The Account Page Match The Input Information" library="TEST_007_Keywords">
+<arg>${fname}</arg>
+<arg>${lname}</arg>
+<arg>${email}</arg>
+<arg>${pNumber}</arg>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${info_name}</arg>
+<arg>${fname} ${lname}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20221025 16:22:51.283" level="INFO">Element 'xpath://*[@id="main"]/div[2]/div[2]/div[2]/div/div[1]/dl/dd[1]' contains text 'group work'.</msg>
+<status status="PASS" starttime="20221025 16:22:51.262" endtime="20221025 16:22:51.284"/>
 </kw>
-<tag>create_a_new_account</tag>
-<status status="FAIL" starttime="20221025 13:49:01.462" endtime="20221025 13:49:02.782">Location should have been 'https://www.verkkokauppa.com/fi/account/login' but was 'https://www.verkkokauppa.com/'.</status>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${info_email}</arg>
+<arg>${email}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20221025 16:22:51.305" level="INFO">Element 'xpath://*[@id="main"]/div[2]/div[2]/div[2]/div/div[2]/dl/dd[1]' contains text 'sandm22@email.com'.</msg>
+<status status="PASS" starttime="20221025 16:22:51.284" endtime="20221025 16:22:51.305"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${info_phone}</arg>
+<arg>${pNumber}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20221025 16:22:51.325" level="INFO">Element 'xpath://*[@id="main"]/div[2]/div[2]/div[2]/div/div[2]/dl/dd[2]' contains text '1234567'.</msg>
+<status status="PASS" starttime="20221025 16:22:51.305" endtime="20221025 16:22:51.325"/>
+</kw>
+<status status="PASS" starttime="20221025 16:22:51.261" endtime="20221025 16:22:51.326"/>
+</kw>
+<tag>create_new_account</tag>
+<status status="PASS" starttime="20221025 16:22:44.045" endtime="20221025 16:22:51.326"/>
 </test>
-<status status="FAIL" starttime="20221025 13:48:55.557" endtime="20221025 13:49:02.782"/>
+<status status="PASS" starttime="20221025 16:22:39.164" endtime="20221025 16:22:51.328"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">create_a_new_account</stat>
+<stat pass="1" fail="0" skip="0">create_new_account</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="TEST 007">TEST 007</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="TEST 007">TEST 007</stat>
 </suite>
 </statistics>
 <errors>
