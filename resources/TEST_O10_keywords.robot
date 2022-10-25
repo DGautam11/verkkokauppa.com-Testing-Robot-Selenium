@@ -23,7 +23,7 @@ login to check if the favourite items are saved
     Sleep    2s
     Click Element    ${form_email}
     Input Text    ${form_email}    ${email}
-    Sleep    2s
+    Sleep    2sbb cTEST_001
     Click Element    ${form_password}
     Input Text    ${form_password}    ${password}
     Sleep    2s
@@ -31,4 +31,4 @@ login to check if the favourite items are saved
     Sleep    5s
     Click Element    ${favourite_icon}
     sleep    2s
-    
+
