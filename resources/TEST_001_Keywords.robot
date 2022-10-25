@@ -19,6 +19,13 @@ Click Hamburger Menu
 
 Check icon is present for each product categories
     ${menu_items_count}=     Get Element Count    ${nav_menu_items}
+    FOR    ${counter}    IN RANGE    1    ${menu_items_count}
+
+       ${icon}    Set Variable    xpath://*[@id="app"]/div[1]/div/aside/nav/div/div[2]/ul/li[${counter}]/a/span[1]/svg    
+       Page Should Contain Element    ${icon}  
+       Element Should Be Visible      ${icon}    
+        
+    END
      
 
     

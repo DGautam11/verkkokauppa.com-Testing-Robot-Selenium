@@ -1,98 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221025 10:33:01.485" rpa="false" schemaversion="3">
-<suite id="s1" name="TEST 004" source="c:\Users\DGautam\Desktop\Verkkokauppa-Test\test_cases\TEST_004.robot">
-<kw name="Open URL" library="TEST_004_Keywords" type="SETUP">
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221025 11:42:17.140" rpa="false" schemaversion="3">
+<suite id="s1" name="TEST 002" source="c:\Users\DGautam\Desktop\Verkkokauppa-Test\test_cases\TEST_002.robot">
+<kw name="Open URL" library="TEST_002_Keyword" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221025 10:33:01.913" level="INFO">Opening browser 'Chrome' to base url 'https://www.verkkokauppa.com/'.</msg>
-<status status="PASS" starttime="20221025 10:33:01.913" endtime="20221025 10:33:05.736"/>
+<msg timestamp="20221025 11:42:17.595" level="INFO">Opening browser 'Chrome' to base url 'https://www.verkkokauppa.com/'.</msg>
+<status status="PASS" starttime="20221025 11:42:17.595" endtime="20221025 11:42:21.112"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221025 10:33:05.736" endtime="20221025 10:33:06.314"/>
+<status status="PASS" starttime="20221025 11:42:21.112" endtime="20221025 11:42:21.328"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221025 10:33:08.320" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221025 10:33:06.314" endtime="20221025 10:33:08.320"/>
+<msg timestamp="20221025 11:42:23.330" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221025 11:42:21.328" endtime="20221025 11:42:23.330"/>
 </kw>
-<status status="PASS" starttime="20221025 10:33:01.913" endtime="20221025 10:33:08.322"/>
+<status status="PASS" starttime="20221025 11:42:17.595" endtime="20221025 11:42:23.330"/>
 </kw>
-<test id="s1-t1" name="User must be able to see Esittely and Lisätiedot in product page" line="8">
-<kw name="Click On A Product" library="TEST_004_Keywords">
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${product}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20221025 10:33:08.325" endtime="20221025 10:33:08.721"/>
+<test id="s1-t1" name="Test wether there is landing page for each product category" line="8">
+<kw name="Check if each product category has landing page" library="TEST_002_Keyword">
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${product_categories}</var>
+<arg>${nav_menus_links}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20221025 11:42:23.354" level="INFO">${product_categories} = []</msg>
+<status status="PASS" starttime="20221025 11:42:23.330" endtime="20221025 11:42:23.354"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${product}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221025 10:33:08.721" level="INFO">Clicking element 'xpath://*[@id="main"]/div/div[3]/div/div/ol/li[2]/div/a'.</msg>
-<status status="PASS" starttime="20221025 10:33:08.721" endtime="20221025 10:33:08.936"/>
+<kw name="Log" library="BuiltIn">
+<arg>${product_categories}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221025 11:42:23.354" level="INFO">[]</msg>
+<status status="PASS" starttime="20221025 11:42:23.354" endtime="20221025 11:42:23.354"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221025 10:33:10.942" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221025 10:33:08.936" endtime="20221025 10:33:10.942"/>
+<status status="PASS" starttime="20221025 11:42:23.330" endtime="20221025 11:42:23.354"/>
 </kw>
-<status status="PASS" starttime="20221025 10:33:08.325" endtime="20221025 10:33:10.942"/>
-</kw>
-<kw name="Check Esittely and Lisätiedot Tabs Are Present in Page" library="TEST_004_Keywords">
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${tabs_page_nav}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20221025 10:33:10.942" endtime="20221025 10:33:11.260"/>
-</kw>
-<kw name="Page Should Contain Element" library="SeleniumLibrary">
-<arg>${tabs_page_esittely}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20221025 10:33:11.279" level="INFO">Current page contains element 'xpath://*[@id="tabs-page-select-tab0"]'.</msg>
-<status status="PASS" starttime="20221025 10:33:11.260" endtime="20221025 10:33:11.279"/>
-</kw>
-<kw name="Page Should Contain Element" library="SeleniumLibrary">
-<arg>${tabs_page_lisatiedot}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20221025 10:33:11.292" level="INFO">Current page contains element 'xpath://*[@id="tabs-page-select-tab1"]'.</msg>
-<status status="PASS" starttime="20221025 10:33:11.279" endtime="20221025 10:33:11.292"/>
-</kw>
-<status status="PASS" starttime="20221025 10:33:10.942" endtime="20221025 10:33:11.292"/>
-</kw>
-<kw name="Check Esittely and Lisätiedot Tabs Are Clickable" library="TEST_004_Keywords">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${tabs_page_esittely}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221025 10:33:11.292" level="INFO">Clicking element 'xpath://*[@id="tabs-page-select-tab0"]'.</msg>
-<status status="PASS" starttime="20221025 10:33:11.292" endtime="20221025 10:33:11.476"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${tabs_page_lisatiedot}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221025 10:33:11.476" level="INFO">Clicking element 'xpath://*[@id="tabs-page-select-tab1"]'.</msg>
-<status status="PASS" starttime="20221025 10:33:11.476" endtime="20221025 10:33:11.846"/>
-</kw>
-<status status="PASS" starttime="20221025 10:33:11.292" endtime="20221025 10:33:11.852"/>
-</kw>
-<status status="PASS" starttime="20221025 10:33:08.323" endtime="20221025 10:33:11.852"/>
+<tag>Categories_Landing_Page</tag>
+<status status="PASS" starttime="20221025 11:42:23.330" endtime="20221025 11:42:23.354"/>
 </test>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221025 10:33:11.852" endtime="20221025 10:33:14.091"/>
+<status status="PASS" starttime="20221025 11:42:23.354" endtime="20221025 11:42:25.503"/>
 </kw>
-<status status="PASS" starttime="20221025 10:33:01.493" endtime="20221025 10:33:14.091"/>
+<status status="PASS" starttime="20221025 11:42:17.148" endtime="20221025 11:42:25.503"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">Categories_Landing_Page</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="TEST 004">TEST 004</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="TEST 002">TEST 002</stat>
 </suite>
 </statistics>
 <errors>

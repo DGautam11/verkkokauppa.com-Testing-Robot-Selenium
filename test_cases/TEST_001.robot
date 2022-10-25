@@ -1,6 +1,7 @@
 *** Settings ***
 Resource    ../resources/TEST_001_Keywords.robot
 Suite Setup    Open URL
+Suite Teardown    Close Browser
 
 
 *** Test Cases ***
