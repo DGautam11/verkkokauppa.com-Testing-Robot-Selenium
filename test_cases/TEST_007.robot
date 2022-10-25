@@ -1,6 +1,7 @@
 *** Settings ***
 Resource    ../resources/TEST_007_Keywords.robot
 Suite Setup    Open URL
+Suite Teardown    Close Browser
 
 *** Variables ***
 ${email}    sandm22@email.com

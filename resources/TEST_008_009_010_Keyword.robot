@@ -7,9 +7,7 @@ Variables    ../page_objects/favouritespage_locator.py
 *** Variables ***
 ${URL}    https://www.verkkokauppa.com/        
 ${BROWSER}    Chrome 
-${email}    pacmann@email.com
-${password}    1234567ab    
-
+   
 
 *** Keywords ***
 Open URL
@@ -31,6 +29,18 @@ Enter Email And Password
 Click Login
     Click Element    ${submit_login_btn}
     Sleep    2s
+
+Check User Is LoggedIn
+    
+    [Arguments]    ${fname}
+    Element Should Contain    ${user_info}    Hei, ${fname}!    
+
+Click User Account Menu Navbar
+    Click Element    ${logout_section}
+    Sleep    2s
+
+Click Logout
+    Click Element    ${logout_icon}
 
 Select Products And Click On Favourite Icon On Product Card
     Click Button    ${product_one_fav_icon}
