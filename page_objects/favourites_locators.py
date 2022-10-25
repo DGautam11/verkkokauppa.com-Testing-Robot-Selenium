@@ -16,3 +16,7 @@ form_password = 'id:login-form-password-modal'
 
 submit_login_btn = 'id:login-button-modal'
 
+logout_section = 'xpath:/html/body/div[1]/div/header/div/nav/div/span[1]'
+logout_icon = 'xpath:/html/body/div[1]/div/div/div/main/div[1]/div/span'
+
+favourite_icon = 'xpath:/html/body/div[1]/div/header/div/nav/div/span[2]'

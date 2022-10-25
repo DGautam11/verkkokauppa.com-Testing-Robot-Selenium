@@ -22,3 +22,5 @@ user must be able to add an item into favourite list
     Sleep    2s
     Add another item to favourite list
     Sleep    2s
+    logout
+    Sleep    2s

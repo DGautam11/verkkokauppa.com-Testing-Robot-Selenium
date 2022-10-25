@@ -18,21 +18,7 @@ Open URL
 Click Allow cookies
     Click Button    ${btn_accept_cookies}
 
-Click On Search Box
-    Click Element    ${search_bar}
-    Maximize Browser Window
-
-Input search Keyword
-       
-    Click Element    ${search_bar} 
-    Input Text    ${search_bar}    ${search_keyword}  
-    Sleep    2s
-    Click Button    ${btn_search}
-    Sleep    5s
-    Click Element    ${btn_favourite}
-    Sleep    2s
-
-user should login to add item into favourite
+login to check if the favourite items are saved
     Click Element    ${login_section}
     Sleep    2s
     Click Element    ${form_email}
@@ -43,28 +29,6 @@ user should login to add item into favourite
     Sleep    2s
     Click Button    ${submit_login_btn}
     Sleep    5s
-
-click favourite icon
-    Click Element    ${btn_favourite}
-    Sleep    2s
-
-Add another item to favourite list
-    Click Element    ${search_bar} 
-    Input Text    ${search_bar}    ${search_keyword2}  
-    Sleep    2s
-    Click Button    ${btn_search}
-    Sleep    5s
-    Click Element    ${btn_favourite2}
+    Click Element    ${favourite_icon}
     sleep    2s
-
-logout
-    Click Element    ${logout_section}
-    Sleep    2s
-    Click Element    ${logout_icon}
-
-
-
-
     
-
-
