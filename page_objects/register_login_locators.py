@@ -25,3 +25,9 @@ info_name = 'xpath://*[@id="main"]/div[2]/div[2]/div[2]/div/div[1]/dl/dd[1]'
 info_email = 'xpath://*[@id="main"]/div[2]/div[2]/div[2]/div/div[2]/dl/dd[1]'
 
 info_phone =  'xpath://*[@id="main"]/div[2]/div[2]/div[2]/div/div[2]/dl/dd[2]'
+
+txt_login_email = 'id:login-form-email-modal'
+
+pwd_login_password = 'id:login-form-password-modal'
+
+submit_login_btn = 'id:login-button-modal'
