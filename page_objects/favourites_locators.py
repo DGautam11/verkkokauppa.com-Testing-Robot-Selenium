@@ -20,3 +20,5 @@ logout_section = 'xpath:/html/body/div[1]/div/header/div/nav/div/span[1]'
 logout_icon = 'xpath:/html/body/div[1]/div/div/div/main/div[1]/div/span'
 
 favourite_icon = 'xpath:/html/body/div[1]/div/header/div/nav/div/span[2]'
+
+login_confirm = 'xpath:/html/body/div[1]/div/header/div/nav/div/span[1]'

@@ -9,7 +9,7 @@ ${email}    pacmann@email.com
 ${password}    1234567ab    
 ${search_keyword}    samsung remote control
 ${search_keyword2}    sony remote control
-
+${fName}    group
 *** Keywords ***
 Open URL
     Open Browser    ${URL}    ${BROWSER}
@@ -43,6 +43,9 @@ user should login to add item into favourite
     Sleep    2s
     Click Button    ${submit_login_btn}
     Sleep    5s
+
+login successful, user name visible at navbar
+    Element Should Contain    ${login_confirm}    ${fName}
 
 click favourite icon
     Click Element    ${btn_favourite}

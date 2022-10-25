@@ -18,6 +18,8 @@ user must be able to add an item into favourite list
     Sleep    2s
     user should login to add item into favourite
     Sleep    2s
+    login successful, user name visible at navbar
+    Sleep    2s
     click favourite icon
     Sleep    2s
     Add another item to favourite list
