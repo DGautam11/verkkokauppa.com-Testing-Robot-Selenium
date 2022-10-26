@@ -3,6 +3,8 @@ Resource    ../resources/TEST_003_Keywords.robot
 Suite Setup    Open URL
 Suite Teardown    Close Browser   
 
+#    Deepan Gautam    Suraj Kharel    Mohan Giri
+
 *** Variables ***
 ${search_keyword}    PS5  
 

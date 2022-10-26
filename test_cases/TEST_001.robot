@@ -3,6 +3,7 @@ Resource    ../resources/TEST_001_Keywords.robot
 Suite Setup    Open URL
 Suite Teardown    Close Browser
 
+#    Deepan Gautam    Suraj Kharel    Mohan Giri
 
 *** Test Cases ***
 Test wether there is icons for all product categories in navigation menu

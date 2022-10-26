@@ -44,20 +44,26 @@ Click Logout
 
 Select Products And Click On Favourite Icon On Product Card
     Click Button    ${product_one_fav_icon}
+    Sleep    2s
     Click Button    ${product_two_fav_icon}
+    Sleep    2s
     ${product_one}=    Get Element Attribute    ${product_one_link}    title
+    Sleep    2s
     ${product_two}=    Get Element Attribute    ${product_two_link}    title
 
     Set Global Variable    ${product_one}
     Set Global Variable    ${product_two}
 
 Click On Favourites Button On Navbar
+    Sleep    2s
     Click Element    ${fav_icon_navbar}
     Sleep    2s
     Location Should Be    https://www.verkkokauppa.com/fi/favorites
 
 Check The Product Added To Favourites Matches The Product On Favourite Page
+    Sleep    2s
     Element Should Contain    ${product_one_info}    ${product_one}
+    Sleep    2s
     Element Should Contain    ${product_two_info}    ${product_two}
     
 
