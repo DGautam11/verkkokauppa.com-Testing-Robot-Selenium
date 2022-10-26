@@ -1,9 +1,12 @@
 *** Settings ***
 Resource    ../resources/TEST_007_Keywords.robot
 Suite Setup    Open URL
+Suite Teardown    Close Browser
+
+#    Deepan Gautam    Suraj Kharel    Mohan Giri
 
 *** Variables ***
-${email}    sandm22@email.com
+${email}    sssandm22@email.com
 ${password}    1234567ab    
 ${fname}    group
 ${lname}    work

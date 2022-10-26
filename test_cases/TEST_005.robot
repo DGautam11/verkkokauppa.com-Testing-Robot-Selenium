@@ -3,6 +3,8 @@ Resource    ../resources/TEST_005_Keywords.robot
 Suite Setup    Open URL
 Suite Teardown    Close Browser
 
+#    Deepan Gautam    Suraj Kharel    Mohan Giri
+
 *** Test Cases ***
 User must be able to add product to the cart 
     [Tags]    add_to_cart 

@@ -3,7 +3,7 @@ Resource    ../resources/TEST_006_Keywords.robot
 Suite Setup    Open URL
 Suite Teardown    Close Browser
 
-
+#    Deepan Gautam    Suraj Kharel    Mohan Giri
 
 *** Test Cases ***
 User must be able to remove added products from the cart
